@@ -1,0 +1,85 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Food Recommender</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style/cont.css') }}">
+    <link rel="icon" href="favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Tangerine:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Merriweather:wght@300;700&family=Open+Sans:wght@300;600&family=Sacramento&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+<body class="back">
+    <h1 class="h1"><strong> 🍔FOOD RECOMMENDATION!!🥪</strong></h1>
+    <br>
+    <p class="para">This system recommends you the best food recipes according
+        to your wish!
+     </p>
+     <p class="para">All you gotta do is input the type of food &#x1F95E you wish to prepare along
+         with how long you wish to cook ⏰</p> 
+         <p class="para">and most importantly how many calories do you want to consume 🔥!!</p>
+        <form action="/predict" method="post">
+            <select name= 'foodtype'>
+                <option >Select the type of food</option>
+                <option value="Non-Veg dessert" class="para">Non-Veg dessert</option>
+                <option value="Veg dessert" class="para" >Veg dessert</option>
+                <option value="Healthy" class="para">Healthy</option>
+                <option value="Veg" class="para">Veg</option>
+                <option value="Non-veg" class="para">Non-veg</option>
+             </select>
+            <br>
+            <br>
+            <select name= 'Mintime'>
+                <option>Min cooking time in mins</option>
+                <option value="10" class="para">10</option>
+                <option value="20" class="para">20</option>
+                <option value="30" class="para">30</option>
+                <option value="40" class="para">40</option>
+                <option value="50" class="para">50</option>
+             </select>
+            <br>
+            <br>
+            <select name= 'Maxtime'>
+                <option >Max cooking time in mins</option>
+                <option value="20" class="para">20</option>
+                <option value="30" class="para">30</option>
+                <option value="40" class="para">40</option>
+                <option value="50" class="para">50</option>
+                <option value="60" class="para">60</option>
+             </select>
+            <br>
+            <br>
+            <select name= 'mincal'>
+                <option >Min calories required in dish</option>
+                <option value="200" class="para">200</option>
+                <option value="500" class="para">500</option>
+                <option value="700" class="para">700</option>
+                <option value="900" class="para">900</option>
+                <option value="1200" class="para">1200</option>
+             </select>
+             <br>
+             <br>
+             <select name= 'maxcal'>
+                <option >Max calories required in dish</option>
+                <option value="600" class="para">600</option>
+                <option value="800" class="para">800</option>
+                <option value="2200" class="para">2200</option>
+                <option value="3200" class="para">3200</option>
+                <option value="4200" class="para">4000</option>
+             </select>
+             <br>
+             <br>
+            <button type="submit" class="btn  btn-info btn-sm ">Recommend</button>
+        </form>
+        <br>
+        
+        <p class="para"> <string>NOTE:</string> The calories limit is between 20-300 under <strong>Healthy</strong> food type,since 
+            this is the ideal limit recommened by dietician!
+        </p>
+
+</body>
