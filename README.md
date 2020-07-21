@@ -8,7 +8,7 @@ This system recommends food recipes according to user input.
 <ul>3. The range of calories they wish to intake</ul>
 <p>According to the user input the recommendation system will suggest
 few food recipes that best suits the user's demand</p>
-<h1>DATA<h1>
+<h1>DATA</h1>
 <p>I took the dataset from kaggle,since the size of the dataset is around 290 Mb and the 
   size limit of github is only 100Mb,I couldn't upload the dataset.</p>
   <p>Hence I have mentioned the link for the dataset,you can click the link
