@@ -8,20 +8,20 @@ This system recommends food recipes according to user input.
 <ul>3. The range of calories they wish to intake</ul>
 <p>According to the user input the recommendation system will suggest
 few food recipes that best suits the user's demand</p>
-# DATA
+<h1>DATA<h1>
 <p>I took the dataset from kaggle,since the size of the dataset is around 290 Mb and the 
   size limit of github is only 100Mb,I couldn't upload the dataset.</p>
   <p>Hence I have mentioned the link for the dataset,you can click the link
   and then have a look as the csv file <a href="https://www.kaggle.com/shuyangli94/food-com-recipes-and-user-interactions?select=RAW_recipes.csv">link</a>
 <p>The dataset consist of around 2,30,000 rows and 12 columns</p>
-# PRE-PROCESSING:
+<h1>PRE-PROCESSING:</h1>
 <p> For the system to recommend recipes according to user wish,I initially
   segregated the recipes into 5 types :
-  <li>1.Veg dessert(without egg)</li>
-   <li>2.Non-Veg dessert(withegg)</li>
-   <li>3.Healthy snack(without egg)</li>
-   <li>4.Veg</li>
-   <li>5.Non-Veg</li>
+  <li>Veg dessert(without egg)</li>
+   <li>Non-Veg dessert(withegg)</li>
+   <li>Healthy snack(without egg)</li>
+   <li>Veg</li>
+   <li>Non-Veg</li>
  <p>Then i added a new column called foodtype where each dish was under either one of the types of food</p>
  <p>Then from the nutrients column I extracted the calories value and then created a new column that contains the calories values
   of that dish</p>
@@ -32,10 +32,10 @@ Once the user has given their input the system will generate a dataframe contain
 Then the model randomly selects any 3 recipes and shows those recipes to the user.
 The main idea behind this was whenever the user wishes to get recipe for the same input,he/she will always find different recipes
 and not the same recipes which they got previously.</p>
-# LEARNING OUTCOME:
+  <h1>LEARNING OUTCOME:</h1>
 <p>My main aim was to learn how to make an end-to-end application after
   processing the data.Hence,I used flask to render my web-application.<p>
- <p>In this project,I learnt how to use flask along with html and make a web-app ,so that users can also use it<p>
+ <p>In this project, I learnt how to use flask along with html ,CSS and bootstrap and make a web-app, so that users can also use it.<p>
  
   
   
